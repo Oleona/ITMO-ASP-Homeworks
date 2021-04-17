@@ -21,12 +21,14 @@ namespace WingtipToys
         {
 
         }
+
         public IQueryable<Product> GetProduct([RouteData("productId")] int? productId)
         {
             if (!productId.HasValue || productId.Value == 0)
             {
                 return null;
             }
+
             return new List<Product>(1) { _service.GetProduct(productId.Value) }.AsQueryable();
         }
 

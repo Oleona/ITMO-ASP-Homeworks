@@ -10,7 +10,6 @@
                 <tr>
                     <td>
                         <img src="<%#:Item.ImagePath %>" style="border:solid; height:300px" alt="<%#:Item.ProductName %>"/>
-                       <!-- <img src="/Catalog/Images/<%#://Item.ImagePath %>" style="border:solid; height:300px" alt="<%#://Item.ProductName %>"/>-->
                     </td>
                     <td>&nbsp;</td>  
                     <td style="vertical-align: top; text-align:left;">

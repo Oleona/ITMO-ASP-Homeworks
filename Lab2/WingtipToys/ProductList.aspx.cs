@@ -20,19 +20,6 @@ namespace WingtipToys
 
         }
 
-        /*public IQueryable<Product> GetProducts([QueryString("id")] int? categoryId, [RouteData] string categoryName)
-            {
-                if (categoryId.HasValue && categoryId > 0)
-                {
-                    return _service.GetProductByCategoryId(categoryId.Value).AsQueryable();
-                }
-
-                if (!string.IsNullOrEmpty(categoryName))
-                {
-                    return _service.GetProductByCategoryName(categoryName).AsQueryable();
-                }
-                return _service.GetAllProducts().AsQueryable();
-            }*/
         public IQueryable<Product> GetProducts([QueryString("id")] int? categoryId, [RouteData] string categoryName)
         {
             if (categoryId.HasValue && categoryId > 0)
@@ -46,14 +33,7 @@ namespace WingtipToys
             }
             return _service.GetAllProducts().AsQueryable();
         }
-        /*  public IQueryable<Product> GetProduct([RouteData("productId")] int? productId)
-          {
-              if (!productId.HasValue || productId.Value == 0)
-              {
-                  return null;
-              }
-              return new List<Product>(1) { _service.GetProduct(productId.Value) }.AsQueryable();
-          }*/
+          
         //дописываю
         protected void productList_SelectedIndexChanged(object sender, EventArgs e)
         {
