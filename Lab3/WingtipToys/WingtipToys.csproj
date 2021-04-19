@@ -208,6 +208,7 @@
     <Content Include="Catalog\Images\Thumbs.db" />
     <Content Include="Catalog\Images\Thumbs\Thumbs.db" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="ProductCreate.aspx" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="ProductList.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -301,6 +302,13 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductContext.cs" />
     <Compile Include="Models\ProductDatabaseInitializer.cs" />
+    <Compile Include="ProductCreate.aspx.cs">
+      <DependentUpon>ProductCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCreate.aspx.designer.cs">
+      <DependentUpon>ProductCreate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProductDetails.aspx.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
