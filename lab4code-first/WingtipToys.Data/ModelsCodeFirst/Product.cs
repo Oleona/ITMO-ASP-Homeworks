@@ -24,5 +24,14 @@ namespace WingtipToys.Data.ModelsCodeFirst
         public int? CategoryID { get; set; }
 
         public virtual Category Category { get; set; }
+
+        public int? ManufacturerID { get; set; }
+
+        public virtual Manufacturer Manufacturer { get; set; }
+        public Product()
+        {
+            Orders = new HashSet<Order>();
+        }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

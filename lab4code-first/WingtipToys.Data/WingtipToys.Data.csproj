@@ -55,7 +55,10 @@
     <Compile Include="ICategoryRepository.cs" />
     <Compile Include="ModelsCodeFirst\Category.cs" />
     <Compile Include="ModelsCodeFirst\C__MigrationHistory.cs" />
+    <Compile Include="ModelsCodeFirst\Manufacturer.cs" />
+    <Compile Include="ModelsCodeFirst\Order.cs" />
     <Compile Include="ModelsCodeFirst\Product.cs" />
+    <Compile Include="ModelsCodeFirst\WingtipDbInitializer.cs" />
     <Compile Include="ModelsCodeFirst\WingtipModelCodeFirst.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlCategoryRepository.cs" />
