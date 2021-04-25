@@ -31,7 +31,7 @@
                             <tr>
                                 <td>
                                   <a href="<%#: GetRouteUrl("ProductByIdRoute", new {productId = Item.ProductID}) %>">
-                                    <image src='<%#:Item.ImagePath%>'
+                                    <image src='/Catalog/Images/<%#:Item.ImagePath%>'
                                       width="100" height="75" border="1" />
                                   </a>
                                 </td>
