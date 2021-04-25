@@ -13,7 +13,7 @@ namespace WingtipToys
 {
     public partial class ProductCreate : System.Web.UI.Page
     {
-        static readonly HttpClient client = new HttpClient();
+        private readonly HttpClient _httpClient = new HttpClient();
         private static readonly IStoreService _service = new StoreService(new InMemoryProductRepository(), new InMemoryCategoryRepository());
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -36,6 +36,21 @@ namespace WingtipToys
             {
                 CreateProductForm.Visible = false;
                 SuccessBlock.Visible = true;
+            }
+        }
+        protected void ValidationImageExistence(object source, ServerValidateEventArgs args)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Head, args.Value);
+            try
+            {
+                using (var response = AsyncHelper.RunSync(() => _httpClient.SendAsync(request)))
+                {
+                    args.IsValid = response.IsSuccessStatusCode && response.Content.Headers.ContentType.MediaType.StartsWith("image/");
+                }
+            }
+            catch (HttpRequestException)
+            {
+                args.IsValid = false;
             }
         }
 
