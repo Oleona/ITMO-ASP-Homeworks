@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace WingtipToys.Data.ModelsCodeFirst
 {
-    public class WingtipDbInitializer : DropCreateDatabaseIfModelChanges<WingtipModelCodeFirst>
+     public class WingtipDbInitializer : DropCreateDatabaseIfModelChanges<WingtipModelCodeFirst>
+    
+
     {
         protected override void Seed(WingtipModelCodeFirst context)
         {
