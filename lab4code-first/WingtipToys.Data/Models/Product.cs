@@ -1,4 +1,4 @@
-﻿/*namespace WingtipToys.Data.Models
+﻿namespace WingtipToys.Data.Models
 {
   public class Product
   {
@@ -16,4 +16,4 @@
 
     public Category Category { get; set; }
   }
-}*/
+}

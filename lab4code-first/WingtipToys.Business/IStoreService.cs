@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using WingtipToys.Data;
 using WingtipToys.Data.ModelsCodeFirst;
 
 namespace WingtipToys.Business

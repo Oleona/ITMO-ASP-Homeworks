@@ -1,10 +1,11 @@
-﻿using Microsoft.Owin;
+﻿using System.Data.Entity;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(WingtipToys.Startup))]
+[assembly: OwinStartup(typeof(WingtipToys.Startup))]
 namespace WingtipToys
 {
-    public partial class Startup {
+    public class Startup {
         public void Configuration(IAppBuilder app) {
         }
     }

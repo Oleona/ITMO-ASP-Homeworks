@@ -58,13 +58,13 @@ namespace WingtipToys {
         protected global::System.Web.UI.WebControls.Label PriceLabel;
         
         /// <summary>
-        /// Price control.
+        /// PriceInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Price;
+        protected global::System.Web.UI.WebControls.TextBox PriceInput;
         
         /// <summary>
         /// PriceValidator control.
@@ -73,16 +73,16 @@ namespace WingtipToys {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator PriceValidator;
+        protected global::System.Web.UI.WebControls.RangeValidator PriceValidator;
         
         /// <summary>
-        /// PriceRangeValidator control.
+        /// PriceRequiredValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator PriceRangeValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PriceRequiredValidator;
         
         /// <summary>
         /// CategoryLabel control.
@@ -103,13 +103,13 @@ namespace WingtipToys {
         protected global::System.Web.UI.WebControls.DropDownList CategoryList;
         
         /// <summary>
-        /// CategoryValidator control.
+        /// CategoryRequiredValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator CategoryValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CategoryRequiredValidator;
         
         /// <summary>
         /// DescriptionLabel control.
@@ -166,22 +166,22 @@ namespace WingtipToys {
         protected global::System.Web.UI.WebControls.TextBox ImageUrlInput;
         
         /// <summary>
-        /// UrlInputValidator control.
+        /// UrlValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator UrlInputValidator;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator UrlValidator;
         
         /// <summary>
-        /// ImageUrlValidator control.
+        /// ImageExistsValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator ImageUrlValidator;
+        protected global::System.Web.UI.WebControls.CustomValidator ImageExistsValidator;
         
         /// <summary>
         /// Button1 control.
@@ -211,12 +211,21 @@ namespace WingtipToys {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl SuccessBlock;
         
         /// <summary>
-        /// MesageProductyName control.
+        /// MesageProductName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal MesageProductyName;
+        protected global::System.Web.UI.WebControls.Literal MesageProductName;
+        
+        /// <summary>
+        /// MessageProductID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal MessageProductID;
     }
 }

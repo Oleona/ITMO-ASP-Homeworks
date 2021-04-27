@@ -5,7 +5,7 @@ namespace WingtipToys.Data.ModelsCodeFirst
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-    using WingtipToys.Data.ModelsCodeFirst;
+
     public partial class Product
     {
         public int ProductID { get; set; }
@@ -26,8 +26,8 @@ namespace WingtipToys.Data.ModelsCodeFirst
         public virtual Category Category { get; set; }
 
         public int? ManufacturerID { get; set; }
-
         public virtual Manufacturer Manufacturer { get; set; }
+
         public Product()
         {
             Orders = new HashSet<Order>();

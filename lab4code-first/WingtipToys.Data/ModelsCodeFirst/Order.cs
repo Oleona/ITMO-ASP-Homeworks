@@ -12,7 +12,6 @@ namespace WingtipToys.Data.ModelsCodeFirst
         {
             Products = new HashSet<Product>();
         }
-
         public int OrderID { get; set; }
         public string DelieveryAddress { get; set; }
         public string PostalCode { get; set; }

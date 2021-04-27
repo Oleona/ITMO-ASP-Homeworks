@@ -11,7 +11,6 @@ namespace WingtipToys.Data
     {
         public Category Create(Category category)
         {
-            // throw new NotImplementedException();
             using (var ctx = new WingtipModelCodeFirst())
             {
                 var added = ctx.Categories.Add(category);
@@ -19,54 +18,8 @@ namespace WingtipToys.Data
                 return added;
             }
         }
-
-        public bool Delete(int categoryId)
-        {
-            // throw new NotImplementedException();
-            using (var ctx = new WingtipModelCodeFirst())
-            {
-                var existing = ctx.Categories.SingleOrDefault(x => x.CategoryID == categoryId);
-                if (existing == null)
-                {
-                    return false;
-                }
-                ctx.Categories.Remove(existing);
-                ctx.SaveChanges();
-                return true;
-            }
-        }
-
-        public Category Get(string categoryName)
-        {
-            //throw new NotImplementedException();
-            using (var ctx = new WingtipModelCodeFirst())
-            {
-                return ctx.Categories.SingleOrDefault(x => x.CategoryName.Equals(categoryName, StringComparison.InvariantCultureIgnoreCase));
-            }
-        }
-
-        public Category Get(int categoryId)
-        {
-            //throw new NotImplementedException();
-            using (var ctx = new WingtipModelCodeFirst())
-            {
-                return ctx.Categories.SingleOrDefault(x => x.CategoryID == categoryId);
-            }
-        }
-
-        public IEnumerable<Category> GetAll()
-        {
-            // throw new NotImplementedException();
-            // using (var ctx = new WingtipEntities())
-            using (var ctx = new WingtipModelCodeFirst())
-            {
-                return ctx.Categories.ToList();
-            }
-        }
-
         public Category Update(Category category)
         {
-            //throw new NotImplementedException();
             using (var ctx = new WingtipModelCodeFirst())
             {
                 var existing = ctx.Categories.SingleOrDefault(x => x.CategoryID == category.CategoryID);
@@ -80,7 +33,45 @@ namespace WingtipToys.Data
                 return existing;
             }
         }
-    }
 
+        public bool Delete(int categoryId)
+        {
+            using (var ctx = new WingtipModelCodeFirst())
+            {
+                var existing = ctx.Categories.SingleOrDefault(x => x.CategoryID == categoryId);
+                if (existing == null)
+                {
+                    return false;
+                }
+                ctx.Categories.Remove(existing);
+                ctx.SaveChanges();
+                return true;
+            }
+        }
+        public Category Get(int categoryId)
+        {
+            using (var ctx = new WingtipModelCodeFirst())
+            {
+                return ctx.Categories.SingleOrDefault(x => x.CategoryID == categoryId);
+            }
+        }
+
+        public Category Get(string categoryName)
+        {
+            using (var ctx = new WingtipModelCodeFirst())
+            {
+                return ctx.Categories.SingleOrDefault(x => x.CategoryName.Equals(categoryName, StringComparison.InvariantCultureIgnoreCase));
+            }
+        }
+
+        public IEnumerable<Category> GetAll()
+        {
+            using (var ctx = new WingtipModelCodeFirst())
+            {
+                return ctx.Categories.ToList();
+            }
+        }
+
+    }
 
 }

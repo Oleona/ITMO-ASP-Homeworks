@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Security.Principal;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -15,7 +18,6 @@ namespace WingtipToys
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
-        //private static readonly IStoreService _service = new StoreService(new InMemoryProductRepository(), new InMemoryCategoryRepository());
         private static readonly IStoreService _service = new StoreService(new SqlProductRepository(), new SqlCategoryRepository());
         protected void Page_Init(object sender, EventArgs e)
         {

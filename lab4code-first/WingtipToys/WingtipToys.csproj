@@ -16,7 +16,8 @@
     <AssemblyName>WingtipToys</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -194,7 +195,6 @@
     <Content Include="Catalog\Images\truckbig.png" />
     <Content Include="Catalog\Images\truckearly.png" />
     <Content Include="Catalog\Images\truckfire.png" />
-    <Content Include="CategoryCreate.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-original.css" />
     <Content Include="Content\bootstrap-original.min.css" />
@@ -211,6 +211,7 @@
     <Content Include="Catalog\Images\Thumbs.db" />
     <Content Include="Catalog\Images\Thumbs\Thumbs.db" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="CategoryCreate.aspx" />
     <Content Include="ProductCreate.aspx" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="ProductList.aspx" />
@@ -248,9 +249,7 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -272,13 +271,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CategoryCreate.aspx.cs">
-      <DependentUpon>CategoryCreate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CategoryCreate.aspx.designer.cs">
-      <DependentUpon>CategoryCreate.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -303,10 +295,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\ProductContext.cs" />
-    <Compile Include="Models\ProductDatabaseInitializer.cs" />
+    <Compile Include="CategoryCreate.aspx.cs">
+      <DependentUpon>CategoryCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CategoryCreate.aspx.designer.cs">
+      <DependentUpon>CategoryCreate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProductCreate.aspx.cs">
       <DependentUpon>ProductCreate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

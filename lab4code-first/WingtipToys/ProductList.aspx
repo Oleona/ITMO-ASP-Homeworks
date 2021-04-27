@@ -9,7 +9,7 @@
 
             <asp:ListView ID="productList" runat="server" 
                 DataKeyNames="ProductID" GroupItemCount="4"
-                ItemType="WingtipToys.Data.Product" SelectMethod="GetProducts" OnSelectedIndexChanged="productList_SelectedIndexChanged">
+                ItemType="WingtipToys.Data.ModelsCodeFirst.Product" SelectMethod="GetProducts" OnSelectedIndexChanged="productList_SelectedIndexChanged">
                 <EmptyDataTemplate>
                     <table >
                         <tr>
@@ -31,7 +31,7 @@
                             <tr>
                                 <td>
                                   <a href="<%#: GetRouteUrl("ProductByIdRoute", new {productId = Item.ProductID}) %>">
-                                    <image src='/Catalog/Images/<%#:Item.ImagePath%>'
+                                    <image src='<%#:Item.ImagePath%>'
                                       width="100" height="75" border="1" />
                                   </a>
                                 </td>

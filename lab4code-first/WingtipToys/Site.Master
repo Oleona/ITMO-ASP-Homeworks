@@ -68,7 +68,7 @@
         </div>
         <div id="CategoryMenu" style="text-align: center">       
             <asp:ListView ID="categoryList"  
-                ItemType="WingtipToys.Data.Category" 
+                ItemType="WingtipToys.Data.ModelsCodeFirst.Category" 
                 runat="server"
                 SelectMethod="GetCategories" >
                 <ItemTemplate>

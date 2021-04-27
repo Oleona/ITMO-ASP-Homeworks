@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WingtipToys.Data.ModelsCodeFirst;
 
 namespace WingtipToys.Data
 {
-  /*  public class InMemoryProductRepository : IProductRepository
+    public class InMemoryProductRepository : IProductRepository
     {
         public Product Create(Product product)
         {
@@ -212,5 +213,5 @@ namespace WingtipToys.Data
                 CategoryID = 5
             }
         };
-    }*/
+    }
 }
